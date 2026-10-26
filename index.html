@@ -1,386 +1,776 @@
- 
+
 <!DOCTYPE html>
 <html lang="az">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Füsun Bağırlı — İnsan resursları üzrə ekspert, təlimçi, mentor və spiker.">
-<title>Füsun Bağırlı | HR Expert & Trainer</title>
-<style>
-:root {
-  --navy: #102442;
-  --navy-light: #1d385c;
-  --gold: #c9a96e;
-  --cream: #f8f7f3;
-  --white: #ffffff;
-  --text: #303744;
-  --muted: #697386;
-  --line: #e8e4da;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 85px; }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--cream);
-  color: var(--text);
-  line-height: 1.75;
-}
-a { color: inherit; }
-.container { width: min(1120px, 88%); margin: auto; }
-header {
-  position: sticky; top: 0; z-index: 10;
-  background: rgba(16,36,66,.97); color: white;
-  border-bottom: 1px solid rgba(201,169,110,.35);
-}
-.navbar {
-  min-height: 76px; display: flex; align-items: center;
-  justify-content: space-between; gap: 20px;
-}
-.logo { font-size: 19px; font-weight: 700; letter-spacing: 1.5px; }
-.logo span { color: var(--gold); }
-nav { display: flex; flex-wrap: wrap; gap: 18px; }
-nav a {
-  color: #f3f4f6; text-decoration: none; font-size: 12px;
-  transition: color .2s;
-}
-nav a:hover { color: var(--gold); }
-.hero {
-  background: linear-gradient(125deg, var(--navy), #203c60);
-  color: white; overflow: hidden;
-}
-.hero-grid {
-  min-height: 580px; display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  align-items: center; gap: 60px; padding-top: 65px; padding-bottom: 65px;
-}
-.eyebrow {
-  color: var(--gold); font-size: 12px; letter-spacing: 3px;
-  text-transform: uppercase; font-weight: 700; margin-bottom: 20px;
-}
-h1 {
-  font-size: clamp(39px, 5.4vw, 66px);
-  line-height: 1.12; letter-spacing: -1.8px; margin-bottom: 25px;
-}
-.hero-copy { max-width: 590px; color: #e0e6ef; font-size: 17px; margin-bottom: 30px; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 13px; }
-.btn {
-  display: inline-block; text-decoration: none; padding: 12px 21px;
-  border: 1px solid var(--gold); border-radius: 3px;
-  font-size: 13px; font-weight: 700;
-}
-.btn-gold { background: var(--gold); color: var(--navy); }
-.btn-outline { color: white; }
-.btn:hover { opacity: .86; }
-.portrait-frame {
-  position: relative; max-width: 390px; width: 100%; margin: auto;
-  padding: 13px; border: 1px solid rgba(201,169,110,.7);
-}
-.portrait {
-  width: 100%; aspect-ratio: 4/5; display: block; object-fit: cover;
-  background: linear-gradient(145deg,#e8e1d4,#b8c2ce);
-}
-.photo-note {
-  font-size: 12px; color: #dbe1e9; text-align: center;
-  margin-top: 12px;
-}
-section { padding: 82px 0; }
-.section-heading { max-width: 700px; margin-bottom: 38px; }
-.kicker {
-  color: #987843; font-size: 11px; letter-spacing: 2.5px;
-  text-transform: uppercase; font-weight: 700; margin-bottom: 9px;
-}
-h2 { color: var(--navy); font-size: clamp(28px,4vw,39px); line-height: 1.25; margin-bottom: 14px; }
-.section-heading p, .body-copy { color: var(--muted); }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; }
-.about-grid p + p { margin-top: 16px; }
-.fact-list { border-top: 1px solid var(--line); }
-.fact {
-  display: grid; grid-template-columns: 125px 1fr; gap: 18px;
-  padding: 17px 0; border-bottom: 1px solid var(--line);
-}
-.fact strong { color: var(--navy); font-size: 13px; }
-.fact span { color: var(--muted); font-size: 14px; }
-.numbers { background: var(--navy); color: white; padding: 35px 0; }
-.number-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; text-align: center; }
-.number-item strong { display: block; color: var(--gold); font-size: 28px; }
-.number-item span { font-size: 13px; color: #e0e6ef; }
-.cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-.card {
-  background: white; padding: 27px; border: 1px solid var(--line);
-  border-radius: 5px; transition: transform .2s, box-shadow .2s;
-}
-.card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px #10244210; }
-.card-index { color: var(--gold); font-size: 12px; letter-spacing: 2px; font-weight: 700; }
-.card h3 { color: var(--navy); font-size: 18px; margin: 13px 0 10px; }
-.card p { color: var(--muted); font-size: 14px; }
-.soft-section { background: #f0eee8; }
-.project-card { border-top: 3px solid var(--gold); }
-.education { margin-top: 35px; }
-.education-row {
-  padding: 20px 0; border-bottom: 1px solid var(--line);
-  display: grid; grid-template-columns: 220px 1fr; gap: 25px;
-}
-.education-row h3 { color: var(--navy); font-size: 16px; }
-.education-row p { color: var(--muted); font-size: 14px; }
-.gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: 17px; }
-.gallery-item {
-  min-height: 230px; background: linear-gradient(135deg,#e6e0d4,#c4cbd3);
-  border: 1px solid var(--line); overflow: hidden;
-}
-.gallery-item img { width: 100%; height: 100%; min-height: 230px; object-fit: cover; display: block; }
-.gallery-caption { font-size: 12px; color: var(--muted); margin-top: 8px; }
-.media-note { font-size: 13px; color: var(--muted); margin-top: 18px; }
-.quote {
-  background: var(--navy); color: white; text-align: center;
-  padding: 65px 20px;
-}
-.quote blockquote {
-  max-width: 800px; margin: auto; font-size: clamp(24px,4vw,37px);
-  font-weight: 700; line-height: 1.4;
-}
-.quote p { color: var(--gold); font-size: 13px; margin-top: 18px; }
-.contact-box {
-  background: white; padding: 38px; border: 1px solid var(--line);
-  display: flex; justify-content: space-between; align-items: center;
-  gap: 25px; flex-wrap: wrap;
-}
-.contact-box p { color: var(--muted); font-size: 14px; }
-footer { background: #0b1a30; color: #c9d0da; padding: 25px 0; font-size: 12px; }
-.footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
-footer a { color: var(--gold); text-decoration: none; }
-@media(max-width:800px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 35px; padding-top: 65px; }
-  .portrait-frame { max-width: 330px; }
-  .about-grid { grid-template-columns: 1fr; gap: 30px; }
-  .cards { grid-template-columns: repeat(2,1fr); }
-  .gallery { grid-template-columns: repeat(2,1fr); }
-  nav { gap: 11px; }
-}
-@media(max-width:540px) {
-  .container { width: 90%; }
-  .navbar { padding: 15px 0; align-items: flex-start; flex-direction: column; }
-  nav a { font-size: 11px; }
-  .cards, .gallery, .number-grid { grid-template-columns: 1fr; }
-  .number-grid { gap: 25px; }
-  section { padding: 58px 0; }
-  .fact { grid-template-columns: 95px 1fr; }
-  .education-row { grid-template-columns: 1fr; gap: 4px; }
-  .contact-box { padding: 25px; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10243d">
+  <meta name="description" content="Füsun Bağırlı — İnsan resursları eksperti, təlimçi, mentor və spiker.">
+  <title>Füsun Bağırlı | HR Expert & Trainer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #10243d;
+      --navy-light: #1d3653;
+      --gold: #bd9a58;
+      --cream: #f8f6f1;
+      --white: #ffffff;
+      --text: #283648;
+      --muted: #687587;
+      --border: #e8e5df;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container { width: min(1120px, 90%); margin: auto; }
+
+    .top-line { height: 4px; background: var(--gold); }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand span { color: var(--gold); }
+
+    nav { display: flex; gap: 25px; align-items: center; }
+
+    nav a {
+      font-size: 13px;
+      font-weight: 600;
+      transition: color .2s;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    .nav-contact, .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .nav-contact:hover, .button:hover {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: white;
+    }
+
+    .hero {
+      background: var(--cream);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-grid {
+      min-height: 610px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 65px;
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #94743b;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    h1 { font-size: clamp(43px, 5vw, 68px); letter-spacing: -1.5px; }
+
+    h1 span { color: var(--gold); }
+
+    .hero-description {
+      margin-top: 24px;
+      max-width: 540px;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .button-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border: 1px solid #cbd0d6;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .button-outline:hover { border-color: var(--navy); }
+
+    .hero-note {
+      margin-top: 28px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-note strong { color: var(--navy); }
+
+    .portrait-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      justify-self: end;
+      padding: 0 18px 18px 0;
+    }
+
+    .portrait-wrap::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 76%;
+      height: 85%;
+      border: 2px solid var(--gold);
+    }
+
+    .portrait {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 490px;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      background: #e7e2d8;
+    }
+
+    .portrait-label {
+      position: absolute;
+      z-index: 2;
+      left: -25px;
+      bottom: 42px;
+      padding: 17px 22px;
+      background: var(--navy);
+      color: white;
+      box-shadow: 0 10px 30px #10243d20;
+    }
+
+    .portrait-label strong { display: block; font-family: "Playfair Display", serif; font-size: 18px; }
+    .portrait-label small { color: #e1c995; font-size: 11px; }
+
+    section { padding: 95px 0; }
+
+    .section-heading { max-width: 680px; margin-bottom: 42px; }
+
+    .section-heading h2 { font-size: clamp(32px, 4vw, 44px); margin-bottom: 16px; }
+
+    .section-heading p { color: var(--muted); font-size: 15px; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .about-aside {
+      background: var(--navy);
+      color: white;
+      padding: 35px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .about-aside h3 { color: white; font-size: 26px; margin-bottom: 15px; }
+    .about-aside p { color: #d6deea; font-size: 14px; }
+
+    .about-content p { color: var(--muted); margin-bottom: 18px; }
+
+    .education {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .education h3 { font-size: 22px; margin-bottom: 16px; }
+
+    .education-item {
+      padding: 0 0 16px 17px;
+      margin-bottom: 16px;
+      border-left: 2px solid var(--gold);
+    }
+
+    .education-item strong { display: block; color: var(--navy); font-size: 14px; }
+    .education-item span { font-size: 13px; color: var(--muted); }
+
+    .services { background: var(--cream); }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 30px 26px;
+      background: white;
+      border: 1px solid var(--border);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 35px #10243d0b;
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 { font-size: 23px; margin-bottom: 12px; }
+    .service-card p { color: var(--muted); font-size: 14px; }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+    }
+
+    .experience-item {
+      padding: 0 0 28px 25px;
+      border-left: 2px solid var(--gold);
+      position: relative;
+    }
+
+    .experience-item::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: var(--gold);
+      border-radius: 50%;
+      left: -6px;
+      top: 7px;
+    }
+
+    .experience-item h3 { font-size: 23px; margin-bottom: 12px; }
+    .experience-item p { color: var(--muted); font-size: 14px; }
+
+    .speaker {
+      background: var(--navy);
+      color: white;
+    }
+
+    .speaker-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .speaker h2 { color: white; font-size: clamp(32px, 4vw, 45px); margin-bottom: 20px; }
+    .speaker p { color: #d2dbe7; margin-bottom: 24px; }
+    .speaker .eyebrow { color: #e0c58e; }
+
+    .quote-card {
+      border: 1px solid #ffffff30;
+      padding: 35px;
+    }
+
+    .quote-mark {
+      font-family: "Playfair Display", serif;
+      color: var(--gold);
+      font-size: 54px;
+      line-height: 1;
+    }
+
+    .quote-card blockquote {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      line-height: 1.5;
+      margin: 15px 0 22px;
+    }
+
+    .quote-card small { color: #e0c58e; }
+
+    .gallery { background: var(--cream); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-card { background: white; border: 1px solid var(--border); }
+
+    .gallery-card img {
+      width: 100%;
+      height: 245px;
+      display: block;
+      object-fit: cover;
+      background: #e9e5dd;
+    }
+
+    .gallery-caption { padding: 18px; }
+    .gallery-caption h3 { font-size: 19px; }
+    .gallery-caption p { color: var(--muted); font-size: 12px; margin-top: 5px; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 60px;
+    }
+
+    .contact-grid h2 { font-size: 42px; margin-bottom: 18px; }
+    .contact-grid p { color: var(--muted); margin-bottom: 25px; }
+
+    .contact-links { display: grid; gap: 14px; }
+
+    .contact-link {
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+      transition: .2s;
+    }
+
+    .contact-link:hover { border-color: var(--gold); background: var(--cream); }
+
+    footer {
+      background: #0b192a;
+      color: #d6deea;
+      padding: 26px 0;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    footer strong { color: white; }
+
+    @media (max-width: 850px) {
+      .navbar { padding: 16px 0; flex-wrap: wrap; }
+      nav { width: 100%; gap: 16px; overflow-x: auto; padding-bottom: 4px; }
+      nav a { white-space: nowrap; }
+      .nav-contact { display: none; }
+      .hero-grid { grid-template-columns: 1fr; gap: 45px; }
+      .portrait-wrap { justify-self: center; max-width: 390px; }
+      .portrait { height: 440px; }
+      .about-grid, .speaker-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 540px) {
+      .container { width: 90%; }
+      section { padding: 65px 0; }
+      .brand { font-size: 21px; }
+      .hero-grid { padding-top: 48px; padding-bottom: 48px; }
+      h1 { font-size: 43px; }
+      .hero-description { font-size: 14px; }
+      .portrait { height: 390px; }
+      .portrait-label { left: -5px; bottom: 32px; }
+      .service-grid, .experience-grid, .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-card img { height: 250px; }
+      .about-aside, .quote-card { padding: 25px; }
+      .contact-grid h2 { font-size: 35px; }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="top-line"></div>
 
-<header>
-  <div class="container navbar">
-    <a class="logo" href="#home" style="text-decoration:none">FÜSUN <span>BAĞIRLI</span></a>
-    <nav>
-      <a href="#about">Haqqımda</a>
-      <a href="#experience">Təcrübə</a>
-      <a href="#training">Təlimlər</a>
-      <a href="#projects">Layihələr</a>
-      <a href="#media">Media</a>
-      <a href="#contact">Əlaqə</a>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="#home">Füsun Bağırlı<span>.</span></a>
 
-<main>
-  <section class="hero" id="home" style="padding-top:0;padding-bottom:0">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">HR Expert · Trainer · Mentor · Speaker</div>
-        <h1>İnsan potensialı ilə davamlı dəyər yaradıram.</h1>
-        <p class="hero-copy">
-          İnsan resursları, təlim və inkişaf, liderlik və karyera inkişafı
-          istiqamətlərində insanlara və təşkilatlara dəstək oluram.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="#about">Məni tanıyın</a>
-          <a class="btn btn-outline" href="#contact">Əlaqə saxlayın</a>
+      <nav aria-label="Əsas menyu">
+        <a href="#about">Haqqımda</a>
+        <a href="#services">Fəaliyyətim</a>
+        <a href="#experience">Təcrübə</a>
+        <a href="#speaker">Spikerlik</a>
+        <a href="#gallery">Qalereya</a>
+        <a href="#contact">Əlaqə</a>
+      </nav>
+
+      <a class="nav-contact" href="#contact">Əlaqə saxla ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">HR Expert · Trainer · Mentor</div>
+          <h1>İnsanları inkişaf etdirərək <span>gələcəyi</span> qururam.</h1>
+
+          <p class="hero-description">
+            İnsan resursları, təlim və inkişaf, mentorluq və gənclərin
+            potensialının üzə çıxarılması istiqamətində çalışan HR eksperti,
+            təlimçi və spiker.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="button" href="#about">Mənim haqqımda</a>
+            <a class="button-outline" href="#experience">Təcrübəmlə tanış ol</a>
+          </div>
+
+          <p class="hero-note">
+            <strong>DNT HUB</strong> təsisçisi · TEDx spikeri
+          </p>
         </div>
-      </div>
-      <div>
-        <div class="portrait-frame">
-          <img class="portrait" src="images/portrait.jpeg" alt="Füsun Bağırlının portreti"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div style="display:none;aspect-ratio:4/5;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(145deg,#e8e1d4,#b8c2ce);color:#102442;text-align:center;padding:20px">
-            <span style="font-size:52px;font-weight:bold">FB</span>
-            <span style="font-size:12px;letter-spacing:2px">PORTRET ŞƏKLİ BURADA</span>
+
+        <div class="portrait-wrap">
+          <img class="portrait" src="images/portrait.jpeg"
+               alt="Füsun Bağırlı — HR eksperti, təlimçi və mentor">
+          <div class="portrait-label">
+            <strong>Füsun Bağırlı</strong>
+            <small>İnsan potensialına investisiya</small>
           </div>
         </div>
-        <p class="photo-note">İnsanlar, öyrənmə və inkişaf mərkəzdədir.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about">
-    <div class="container">
-      <div class="section-heading">
-        <div class="kicker">Haqqımda</div>
-        <h2>Peşəkar fəaliyyətim və yanaşmam</h2>
-      </div>
-      <div class="about-grid">
-        <div>
-          <p class="body-copy">
-            Mən Füsun Bağırlı — insan resursları üzrə ekspert, təlimçi, mentor
-            və spikerəm. Fəaliyyətim insan resursları əməliyyatları, işə qəbul,
-            əməkdaşların adaptasiyası, təlim və inkişaf istiqamətlərini əhatə edir.
+    <section id="about">
+      <div class="container about-grid">
+        <aside class="about-aside">
+          <div class="eyebrow">Peşəkar yanaşmam</div>
+          <h3>İnkişaf təsadüf deyil, düzgün yanaşmanın nəticəsidir.</h3>
+          <p>
+            İnsanların potensialını üzə çıxarmaq, komandaları gücləndirmək
+            və öyrənməni real nəticələrə çevirmək mənim fəaliyyətimin əsasını təşkil edir.
           </p>
-          <p class="body-copy">
-            DNT HUB-ın təsisçisi olaraq ekspert biliklərini, təşkilatların
-            ehtiyaclarını və inkişaf imkanlarını bir araya gətirən təşəbbüslər
-            üzərində çalışıram. İnsan mərkəzli yanaşma, öyrənmə mədəniyyəti
-            və ölçülə bilən nəticələr iş prinsipimin əsasını təşkil edir.
+        </aside>
+
+        <div class="about-content">
+          <div class="section-heading">
+            <div class="eyebrow">Haqqımda</div>
+            <h2>İnsan. İnkişaf. Nəticə.</h2>
+          </div>
+
+          <p>
+            İnsan resursları və təlim-tədris sahəsində 8 ildən artıq təcrübəyə
+            malikəm. Karyeram ərzində işə qəbul, əməkdaşların adaptasiyası,
+            təlim proqramlarının hazırlanması, komanda inkişafı və performans
+            istiqamətlərində çalışmışam.
+          </p>
+
+          <p>
+            Eyni zamanda müxtəlif layihələrdə mentor və spiker kimi iştirak edir,
+            gənclərin karyera inkişafına və peşəkar bacarıqlarının formalaşmasına
+            dəstək göstərirəm. DNT HUB çərçivəsində ekspertləri, təşkilatları və
+            inkişaf imkanlarını bir araya gətirməyə çalışıram.
+          </p>
+
+          <div class="education">
+            <h3>Təhsil</h3>
+
+            <div class="education-item">
+              <strong>İnsan Resurslarının İdarə Edilməsi</strong>
+              <span>Xəzər Universiteti · Magistratura</span>
+            </div>
+
+            <div class="education-item">
+              <strong>Biznesin İdarə Edilməsi (MBA)</strong>
+              <span>İstanbul Universiteti · Fəxri məzun</span>
+            </div>
+
+            <div class="education-item">
+              <strong>Fransız dili müəllimliyi</strong>
+              <span>Bakı Slavyan Universiteti</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Fəaliyyət istiqamətləri</div>
+          <h2>Ekspertizam və xidmətlər</h2>
+          <p>
+            İnsanların, komandaların və təşkilatların inkişafına yönəlmiş
+            praktiki və nəticəyönümlü fəaliyyət.
           </p>
         </div>
-        <div class="fact-list">
-          <div class="fact"><strong>İxtisas</strong><span>HR, Learning & Development</span></div>
-          <div class="fact"><strong>Fəaliyyət</strong><span>Ekspert, təlimçi, mentor və spiker</span></div>
-          <div class="fact"><strong>Təşəbbüs</strong><span>DNT HUB təsisçisi</span></div>
-          <div class="fact"><strong>Peşəkar mövzular</strong><span>Liderlik, komanda işi, karyera və kommunikasiya</span></div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-number">01</div>
+            <h3>İnsan resursları</h3>
+            <p>
+              İşə qəbul, namizəd seçimi, adaptasiya, performansın idarə edilməsi
+              və HR proseslərinin təkmilləşdirilməsi.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">02</div>
+            <h3>Təlim və inkişaf</h3>
+            <p>
+              Ehtiyacların təhlili, təlim proqramlarının dizaynı,
+              korporativ təlimlər və əməkdaşların inkişafı.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">03</div>
+            <h3>Mentorluq</h3>
+            <p>
+              Karyera planlaması, şəxsi brendinq, müsahibəyə hazırlıq
+              və gənclərin peşəkar inkişafına dəstək.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">04</div>
+            <h3>Spikerlik</h3>
+            <p>
+              Konfranslar, tədbirlər, panel müzakirələri və auditoriya
+              qarşısında çıxışlar.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">05</div>
+            <h3>Komanda inkişafı</h3>
+            <p>
+              Komanda işi, effektiv ünsiyyət, liderlik və insanmərkəzli
+              idarəetmə üzrə proqramlar.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">06</div>
+            <h3>Layihələrin inkişafı</h3>
+            <p>
+              Təhsil və gənclər layihələrinin planlaşdırılması,
+              ekspertlərlə əməkdaşlıq və inkişaf təşəbbüsləri.
+            </p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="numbers">
-    <div class="container number-grid">
-      <div class="number-item"><strong>HR &amp; L&amp;D</strong><span>Peşəkar ixtisaslaşma</span></div>
-      <div class="number-item"><strong>DNT HUB</strong><span>Ekspert və inkişaf platforması</span></div>
-      <div class="number-item"><strong>TEDx</strong><span>Spikerlik və şəxsi inkişaf</span></div>
-    </div>
-  </div>
+    <section id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Peşəkar fəaliyyət</div>
+          <h2>Təcrübə və nailiyyətlər</h2>
+          <p>
+            İnsan resursları, korporativ mühit, təlim və ictimai layihələri
+            birləşdirən çoxşaxəli təcrübə.
+          </p>
+        </div>
 
-  <section id="experience">
-    <div class="container">
-      <div class="section-heading">
-        <div class="kicker">Peşəkar yol</div>
-        <h2>Təcrübə və fəaliyyət istiqamətləri</h2>
-        <p>İnsan resursları proseslərindən öyrənmə və inkişaf proqramlarına qədər.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <span class="card-index">01 / HR</span>
-          <h3>İnsan resursları</h3>
-          <p>İşə qəbul, namizədlərin qiymətləndirilməsi, onboarding, performansın izlənməsi və əməkdaşların inkişafı.</p>
-        </article>
-        <article class="card">
-          <span class="card-index">02 / L&amp;D</span>
-          <h3>Təlim və inkişaf</h3>
-          <p>Təlim ehtiyaclarının müəyyənləşdirilməsi, proqramların hazırlanması, təşkili və nəticələrin qiymətləndirilməsi.</p>
-        </article>
-        <article class="card">
-          <span class="card-index">03 / LEADERSHIP</span>
-          <h3>Komanda və liderlik</h3>
-          <p>İnsan mərkəzli idarəetmə, effektiv kommunikasiya, komanda işi və liderlik bacarıqlarının inkişafı.</p>
-        </article>
-      </div>
-      <div class="education">
-        <div class="section-heading" style="margin-top:48px;margin-bottom:10px">
-          <div class="kicker">Təhsil</div>
-          <h2 style="font-size:27px">Akademik baza</h2>
-        </div>
-        <div class="education-row">
-          <h3>Xəzər Universiteti</h3>
-          <p>İnsan resurslarının idarə edilməsi üzrə magistr təhsili — davam edir.</p>
-        </div>
-        <div class="education-row">
-          <h3>İstanbul Universiteti</h3>
-          <p>Biznesin idarə edilməsi (MBA) — fəxri məzun.</p>
-        </div>
-        <div class="education-row">
-          <h3>Bakı Slavyan Universiteti</h3>
-          <p>Fransız dili müəllimliyi və metodikası üzrə bakalavr təhsili.</p>
+        <div class="experience-grid">
+          <article class="experience-item">
+            <h3>Korporativ HR və işə qəbul</h3>
+            <p>
+              Namizədlərin axtarışı və qiymətləndirilməsi, müsahibələr,
+              işə qəbul proseslərinin koordinasiyası və əməkdaşların adaptasiyası.
+            </p>
+          </article>
+
+          <article class="experience-item">
+            <h3>Təlim və inkişaf proqramları</h3>
+            <p>
+              Müxtəlif auditoriyalar üçün təlimlərin hazırlanması və təşkili,
+              təlim ehtiyaclarının müəyyənləşdirilməsi və nəticələrin izlənməsi.
+            </p>
+          </article>
+
+          <article class="experience-item">
+            <h3>Gənclər və könüllülük layihələri</h3>
+            <p>
+              2017-ci ildən könüllülərlə iş, tədbir komandalarının koordinasiyası,
+              yeni iştirakçıların hazırlanması və mentorluq fəaliyyəti.
+            </p>
+          </article>
+
+          <article class="experience-item">
+            <h3>DNT HUB — təsisçi</h3>
+            <p>
+              Təlim, inkişaf və ekspert şəbəkəsinin formalaşdırılması,
+              tərəfdaşlıqların qurulması və inkişaf layihələrinin idarə olunması.
+            </p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="soft-section" id="training">
-    <div class="container">
-      <div class="section-heading">
-        <div class="kicker">Təlim və mentorluq</div>
-        <h2>İnkişafı dəstəkləyən mövzular</h2>
-        <p>Auditoriyanın ehtiyaclarına uyğun qurulan təlim, mentorluq və inkişaf təcrübələri.</p>
-      </div>
-      <div class="cards">
-        <article class="card"><span class="card-index">01</span><h3>Şəxsi brendinq və karyera</h3><p>Peşəkar imicin formalaşdırılması, karyera planlaması və iş dünyasına hazırlıq.</p></article>
-        <article class="card"><span class="card-index">02</span><h3>Effektiv kommunikasiya</h3><p>Auditoriya qarşısında çıxış, təqdimat bacarıqları və işgüzar ünsiyyət.</p></article>
-        <article class="card"><span class="card-index">03</span><h3>Liderlik və komanda işi</h3><p>Komanda əməkdaşlığı, liderlik, insan mərkəzli idarəetmə və komanda dinamikası.</p></article>
-        <article class="card"><span class="card-index">04</span><h3>Korporativ mühit</h3><p>Korporativ mədəniyyət, iş mühitinə adaptasiya və peşəkar davranış.</p></article>
-        <article class="card"><span class="card-index">05</span><h3>Təlim proqramlarının dizaynı</h3><p>Təlim ehtiyaclarının təhlili, proqram strukturu və öyrənmə nəticələrinin planlanması.</p></article>
-        <article class="card"><span class="card-index">06</span><h3>Mentorluq</h3><p>Gənclərin peşəkar istiqamət seçiminə və inkişaf hədəflərinə dəstək.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <div class="section-heading">
-        <div class="kicker">Layihələr</div>
-        <h2>Bilik və ideyaları real imkanlara çevirmək</h2>
-      </div>
-      <div class="cards">
-        <article class="card project-card">
-          <span class="card-index">FOUNDER</span>
-          <h3>DNT HUB</h3>
-          <p>Ekspertləri, təşkilatları və inkişaf imkanlarını birləşdirən təlim, inkişaf və məsləhət platforması.</p>
-        </article>
-        <article class="card project-card">
-          <span class="card-index">TEDx SPEAKER</span>
-          <h3>Düşdüyün Yerdən Yox, Düşündüyün Yerdən Başla</h3>
-          <p>Şəxsi inkişaf, düşüncə tərzi və yeni başlanğıclar haqqında çıxış.</p>
-        </article>
-        <article class="card project-card">
-          <span class="card-index">MENTOR</span>
-          <h3>Gənclərin inkişafı</h3>
-          <p>Karyera inkişafı, ideyaların formalaşdırılması və gənclərlə mentorluq təşəbbüsləri.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="soft-section" id="media">
-    <div class="container">
-      <div class="section-heading">
-        <div class="kicker">Fotoqalereya</div>
-        <h2>Fəaliyyətimdən anlar</h2>
-        <p>Şəxsi fotolar, təlimlər, tədbirlər və səhnə çıxışları burada yerləşdiriləcək.</p>
-      </div>
-      <div class="gallery">
-        <div><div class="gallery-item"><img src="images/event-1.jpg" alt="Təlim və tədbir fotosu" loading="lazy" onerror="this.style.display='none'"></div><p class="gallery-caption">Təlim və inkişaf</p></div>
-        <div><div class="gallery-item"><img src="images/event-2.jpg" alt="Spikerlik fotosu" loading="lazy" onerror="this.style.display='none'"></div><p class="gallery-caption">Spikerlik və çıxışlar</p></div>
-        <div><div class="gallery-item"><img src="images/event-3.jpg" alt="Mentorluq layihəsindən foto" loading="lazy" onerror="this.style.display='none'"></div><p class="gallery-caption">Mentorluq və layihələr</p></div>
-      </div>
-      <p class="media-note">Bu foto sahələrinə öz şəkillərini əlavə etdikdə onlar avtomatik görünəcək.</p>
-    </div>
-  </section>
-
-  <div class="quote">
-    <blockquote>“Düşdüyün Yerdən Yox, Düşündüyün Yerdən Başla.”</blockquote>
-    <p>TEDx çıxışım</p>
-  </div>
-
-  <section id="contact">
-    <div class="container">
-      <div class="contact-box">
+    <section class="speaker" id="speaker">
+      <div class="container speaker-grid">
         <div>
-          <div class="kicker">Əlaqə</div>
-          <h2 style="font-size:28px">Birlikdə dəyər yaradaq.</h2>
-          <p>Əməkdaşlıq, təlim, mentorluq və peşəkar layihələr üçün LinkedIn vasitəsilə əlaqə saxlaya bilərsiniz.</p>
+          <div class="eyebrow">İdeyalar və ilham</div>
+          <h2>Öyrəndiklərimi paylaşmaq, inkişafı hərəkətə gətirmək.</h2>
+          <p>
+            TEDx çıxışımda şəxsi yanaşmanın, düşüncə tərzinin və çətinliklərdən
+            sonra yenidən başlamağın əhəmiyyətini bölüşmüşəm. Təlimlərdə və
+            tədbirlərdə məqsədim auditoriyaya yeni baxış bucağı qazandırmaqdır.
+          </p>
+          <a class="button" href="https://www.linkedin.com/in/fusun-baghirli/"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn profilim ↗
+          </a>
         </div>
-        <a class="btn btn-gold" href="https://www.linkedin.com/in/fusun-baghirli/" target="_blank" rel="noopener noreferrer">LinkedIn profilim</a>
-      </div>
-    </div>
-  </section>
-</main>
 
-<footer>
-  <div class="container footer-inner">
-    <span>© 2026 Füsun Bağırlı. Bütün hüquqlar qorunur.</span>
-    <a href="#home">Səhifənin əvvəlinə ↑</a>
-  </div>
-</footer>
+        <div class="quote-card">
+          <div class="quote-mark">“</div>
+          <blockquote>
+            Düşdüyün yerdən yox, düşündüyün yerdən başla.
+          </blockquote>
+          <small>TEDx çıxışımın adı</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Fəaliyyətdən anlar</div>
+          <h2>Tədbirlər və çıxışlar</h2>
+          <p>
+            Təlimlərdən, tədbirlərdən və peşəkar fəaliyyətimdən seçilmiş anlar.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="images/event-1.jpg" alt="Füsun Bağırlının tədbirindən görüntü" loading="lazy">
+            <div class="gallery-caption">
+              <h3>Təlim və inkişaf</h3>
+              <p>Biliklərin paylaşılması və praktiki öyrənmə</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <img src="images/event-2.jpg" alt="Füsun Bağırlının çıxışından görüntü" loading="lazy">
+            <div class="gallery-caption">
+              <h3>Spikerlik və çıxışlar</h3>
+              <p>İdeyalar, təcrübə və ilham</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <img src="images/event-3.jpg" alt="Füsun Bağırlının layihə fəaliyyətindən görüntü" loading="lazy">
+            <div class="gallery-caption">
+              <h3>Mentorluq və layihələr</h3>
+              <p>Gənclərin və komandaların inkişafı</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="eyebrow">Əlaqə</div>
+          <h2>Birlikdə dəyər yaradaq.</h2>
+          <p>
+            Təlim, mentorluq, spikerlik və əməkdaşlıq təklifləri üçün
+            mənimlə əlaqə saxlaya bilərsiniz.
+          </p>
+          <a class="button" href="https://www.linkedin.com/in/fusun-baghirli/"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn-də əlaqə saxla ↗
+          </a>
+        </div>
+
+        <div class="contact-links">
+          <a class="contact-link"
+             href="https://www.linkedin.com/in/fusun-baghirli/"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn · fusun-baghirli ↗
+          </a>
+          <a class="contact-link" href="#home">
+            Füsun Bağırlı · Şəxsi portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 <strong>Füsun Bağırlı</strong>. Bütün hüquqlar qorunur.</span>
+      <span>İnsan. İnkişaf. Nəticə.</span>
+    </div>
+  </footer>
 </body>
 </html>
