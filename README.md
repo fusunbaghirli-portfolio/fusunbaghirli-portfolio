@@ -1,7 +1,3 @@
-
-aha etdim
-Əla, Füsun! ❤️ İndi saytımızın faylını yaradacağıq ki, Render onu göstərə bilsin.
-
 Növbəti addım — index.html yaratmaq
 1. GitHub hesabına keç: github.com
 
