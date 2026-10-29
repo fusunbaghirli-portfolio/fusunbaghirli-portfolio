@@ -14,13 +14,13 @@
 
   <style>
     :root {
-      --bg: #F7F3ED;
-      --surface: #FFFFFF;
-      --surface-light: #EFE9DF;
-      --gold: #C9A86A;
+      --bg: #10100f;
+      --surface: #171715;
+      --surface-light: #201f1b;
+      --gold: #c8aa76;
       --gold-light: #e4d0a9;
-      --cream: #F7F3ED;
-      --muted: #555555;
+      --cream: #f4efe5;
+      --muted: #aaa69c;
       --line: rgba(200,170,118,.23);
       --font-body: "DM Sans", sans-serif;
       --font-display: "Playfair Display", serif;
@@ -846,83 +846,17 @@ header {
 }
 
 .portrait-wrap {
-  position: relative;
-  width: min(100%, 420px);
-  aspect-ratio: 1 / 1;
-  justify-self: end;
-  padding: 6px;
-  border: 1.5px solid #C9A86A;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.portrait {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 25%;
-}
-
-@media (max-width: 540px) {
-  .portrait-wrap {
-    width: min(85%, 320px);
-  }
-}
-
-
-/* ÜMUMİ AÇIQ BEJ DİZAYN */
-html,
-body {
-  background: #F7F3ED !important;
-  color: #2F2F2F !important;
-}
-
-body,
-main,
-section,
-.hero,
-.about,
-.expertise,
-.experience,
-.projects,
-.statement,
-.contact {
-  background-color: #F7F3ED !important;
-  color: #2F2F2F;
-}
-
-/* Əsas səhifənin açıq fonu */
-.hero {
-  background:
-    radial-gradient(
-      circle at 75% 40%,
-      #ECE5D8 0%,
-      transparent 45%
-    ),
-    #F7F3ED !important;
-}
-
-/* Qızılı detallar */
-.hero .eyebrow,
-.portrait-label strong {
-  color: #C9A86A;
-}
-
-/* DAİRƏVİ PORTRET VƏ İNCƏ QIZILI ÇƏRÇİVƏ */
-.portrait-wrap {
   width: min(100%, 370px);
-  aspect-ratio: 1 / 1;
-  padding: 7px;
-  border: 1.5px solid #C9A86A;
+  aspect-ratio: 1;
+  padding: 10px;
+  border: 1px solid #bd9a58;
   border-radius: 50%;
-  overflow: hidden;
   justify-self: center;
-  box-shadow: 0 0 0 5px rgba(201, 168, 106, 0.10);
+  box-shadow: 0 0 0 9px rgba(189, 154, 88, 0.07),
+              0 0 55px rgba(189, 154, 88, 0.12);
 }
 
 .portrait {
-  display: block;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -936,146 +870,7 @@ section,
   }
 }
 
-   
-/* Ümumi açıq krem fon */
-body {
-  background-color: #F7F3ED;
-  color: #2F2F2F;
-}
-
-/* Şəkil və çərçivə tam dairəvi */
-.portrait-wrap {
-  width: min(100%, 370px);
-  aspect-ratio: 1 / 1;
-  padding: 6px;
-  border: 1.5px solid #C9A86A;
-  border-radius: 50%;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-/* Şəklin özü də dairəvi */
-.portrait-wrap .portrait {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* AÇIQ KREM FON VƏ TÜND MƏTNLƏR */
-:root {
-  --bg: #F7F3ED !important;
-  --surface: #FFFFFF !important;
-  --surface-light: #EFE9DF !important;
-  --gold: #C9A86A !important;
-  --muted: #555555 !important;
-}
-
-html,
-body {
-  background: #F7F3ED !important;
-  color: #2F2F2F !important;
-}
-
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6,
-body p,
-body li,
-body span,
-body label,
-body small {
-  color: #2F2F2F;
-}
-
-body a {
-  color: #A98545;
-}
-
-body header,
-body section,
-body footer,
-body .navbar,
-body .hero,
-body .metrics,
-body .about,
-body .experience,
-body .projects,
-body .contact {
-  background-color: transparent;
-}
-
-body .metric,
-body .card,
-body .project-card,
-body .experience-card {
-  background-color: #FFFFFF;
-  border-color: #E5DCCF;
-}
-
-/* DAİRƏVİ PORTRET VƏ QIZILI ÇƏRÇİVƏ */
-img.profile-portrait,
-img[src*="portrait.jpeg"] {
-  width: 280px !important;
-  height: 280px !important;
-  aspect-ratio: 1 / 1 !important;
-  object-fit: cover !important;
-  object-position: center top !important;
-  border-radius: 50% !important;
-  border: 2px solid #C9A86A !important;
-  display: block;
-  box-sizing: border-box;
-}
   </style>
-
-<style>
-  /* Ümumi açıq fon və tünd mətn */
-  html,
-  body {
-    background-color: #F7F3ED !important;
-    color: #222222 !important;
-  }
-
-  body,
-  body p,
-  body li,
-  body label {
-    color: #222222;
-  }
-
-  /* Başlıqlar və əsas mətnlər */
-  body h1,
-  body h2,
-  body h3,
-  body h4,
-  body h5,
-  body h6 {
-    color: #222222;
-  }
-
-  /* Qızılı vurğular */
-  body .gold,
-  body .accent {
-    color: #C9A86A;
-  }
-</style>
-
-
-<style>
-  .profile-portrait {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #C9A86A;
-    display: block;
-  }
-</style>
-
 </head>
 
 <body>
@@ -1121,7 +916,7 @@ img[src*="portrait.jpeg"] {
 
         <div class="hero-visual">
           <div class="portrait-frame">
-            <img class="profile-portrait" src="images/portrait.jpeg" alt="Füsun Bağırlı — professional portret" fetchpriority="high">
+            <img src="images/portrait.jpeg" alt="Füsun Bağırlı — professional portret" fetchpriority="high">
           </div>
           <div class="portrait-caption">
             <strong>İnkişafın arxasında insan dayanır.</strong>
